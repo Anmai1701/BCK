@@ -16,15 +16,14 @@
   <body>
     <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container-fluid justify-content-center"> <!-- căn giữa toàn bộ -->
-    <a class="navbar-brand d-flex align-items-center me-5" href="./index.html">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="./index.html">
       <img
         src="https://i.pinimg.com/736x/2d/46/54/2d4654800dd4e73c17649930e56ee8a3.jpg"
         alt=""
         style="width: 50px"
-        class="me-2"
       />
-      <span class="text-white">Genshin Impact</span>
+      Genshin Impact
     </a>
 
     <button
@@ -39,22 +38,26 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link text-white" href="./index.html">Home</a>
+          <a class="nav-link" href="./index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="./pages/characters.html">Characters</a>
+          <a class="nav-link" href="./pages/characters.html">Characters</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="./pages/weapons.html">Weapons</a>
+          <a class="nav-link" href="./pages/weapons.html">Weapons</a>
+        </li>
+      </ul>
+
+      <!-- Login & Logout sang phải -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" id="login-btn" href="./pages/login.html">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" id="login-btn" href="./pages/login.html">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" id="logout-btn" href="./index.html">Logout</a>
+          <a class="nav-link" id="logout-btn" href="./index.html">Logout</a>
         </li>
       </ul>
     </div>
