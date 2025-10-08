@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body {
   background-color: whitesmoke;
   margin: 0 auto;
@@ -25,7 +24,7 @@ footer {
 
 .hot_news {
   /* hinh anh background */
-  background: url("https://i.pinimg.com/1200x/a8/89/78/a88978edd675c1946a00ff415fdcad1b.jpg")
+  background: url("https://i.pinimg.com/736x/26/bd/1f/26bd1ff6677c6beb151d537cf2670c55.jpg")
   center/cover no-repeat fixed;  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -119,7 +118,7 @@ main {
   transform: scale(1.5);
   z-index: 10;
 }
-=======
+
 body {
   background-color: whitesmoke;
   margin: 0 auto;
@@ -228,4 +227,3 @@ main {
   margin-right: 20px;
   letter-spacing: 1px;
 }
->>>>>>> c209d2dc00e681b591c3c799057ce12d291e5c60
