@@ -39,7 +39,7 @@ footer {
   flex-direction: column;
 
   .card {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #000000cc;
     border-radius: 10px;
     color: #fff;
     padding: 20px;
