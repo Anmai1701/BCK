@@ -1,7 +1,7 @@
 const url_root = "https://genshin.jmp.blue/";
 const API_Key = "";
 async function renderCharacters() {
-  const container = document.getElementById("characters");
+  const container = document.getElementById("characters-list");
   // goi api
   fetch(url_root + "characters")
     .then((json) => json.json()) // chuyen tu json -> object js
