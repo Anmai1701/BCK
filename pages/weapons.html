@@ -10,7 +10,7 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="./css/pages.css" />
   </head>
   <body>
     <!-- nav -->
@@ -66,7 +66,7 @@
     </div>
   </div>
 </nav>
-
+<body style="padding-top: 80px"></body>
     <header class="hot_news container-fluid p-5">
       <h1 class="w-100 text-center">Weapons</h1>
       <!-- find -->
@@ -91,18 +91,11 @@
     </header>
     <main class="container-fluid px-5 py-2">
       
-
-<div class="modal fade" id="weaponModal" tabindex="-1" aria-labelledby="weaponModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="weaponModalLabel">Weapon Info</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" id="weaponModalBody">
-        <!-- Nội dung sẽ được thêm bằng JS -->
-      </div>
-    </div>
+<!-- Modal hiển thị chi tiết vũ khí -->
+<div id="weapon-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="weapon-info"></div>
   </div>
 </div>
 

@@ -10,10 +10,11 @@ async function renderWeapons() {
       data?.forEach((char_name) => {
         const li = document.createElement("li");
         const link = document.createElement("a");
-        link.href = url_root + "weapons/" + char_name;
-        link.innerHTML = `<img width="200" src=${
-          url_root + "weapons/" + char_name + "/icon"
-        } alt=${char_name}/>`;
+        link.innerHTML = `<img width="200" src="${url_root + "weapons/" + char_name + "/icon"}" alt="${char_name}" style="cursor:pointer"/>`;
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          showWeaponDetail(char_name);
+        });
         // add vao container
         li.appendChild(link);
         container.appendChild(li);
@@ -22,51 +23,36 @@ async function renderWeapons() {
     .catch((err) => console.error(err));
 }
 
-renderWeapons();
-  
-function createWeaponCard(weapon) {
-    return `
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card h-100 bg-light">
-          <div class="card-body">
-            <h5 class="card-title">${weapon.name}</h5>
-            <p class="card-text">
-              Type: **${weapon.type.charAt(0).toUpperCase() + weapon.type.slice(1)}**<br>
-              Rarity: **${weapon.stars}** Star
-            </p>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-  
-  function filterAndDisplayWeapons(selectedType) {
-    weaponListContainer.innerHTML = '';
-  
-    const filteredWeapons = weaponsData.filter(weapon => {
-      return selectedType === 'all' || weapon.type === selectedType;
-    });
-  
-    let weaponHTML = '';
-    if (filteredWeapons.length > 0) {
-      filteredWeapons.forEach(weapon => {
-        weaponHTML += createWeaponCard(weapon);
-      });
-    } else {
-      weaponHTML = '<div class="col-12"><p class="text-center">No weapons of this type found.</p></div>';
-    }
-  
-    weaponListContainer.innerHTML = weaponHTML;
-  }
-  
-  typeSelect.addEventListener('change', (event) => {
-    const selectedValue = event.target.value;
-    console.log('Selected weapon type:', selectedValue);
-    filterAndDisplayWeapons(selectedValue);
-  });
-  
-  document.addEventListener('DOMContentLoaded', () => {
-    const initialType = typeSelect.value; 
-    filterAndDisplayWeapons(initialType);
-  });
+function showWeaponDetail(weaponId) {
+  fetch(url_root + "weapons/" + weaponId)
+    .then((res) => res.json())
+    .then((data) => {
+      const infoHTML = `
+        <h2>${data.name}</h2>
+        <p><strong>Type:</strong> ${data.type}</p>
+        <p><strong>Rarity:</strong> ${data.rarity} ⭐</p>
+        <p><strong>Base Attack:</strong> ${data.baseAttack}</p>
+        <p><strong>Substat:</strong> ${data.substat}</p>
+        <p><strong>Passive:</strong> ${data.passiveDesc}</p>
+        <p><strong>Used by:</strong> ${data.location}</p>
+      `;
+      document.getElementById("weapon-info").innerHTML = infoHTML;
+      document.getElementById("weapon-modal").style.display = "block";
+    })
+    .catch((err) => console.error("Lỗi khi lấy chi tiết vũ khí:", err));
+};
 
+// Đóng modal khi click vào nút X
+document.querySelector(".close").addEventListener("click", () => {
+  document.getElementById("weapon-modal").style.display = "none";
+});
+
+// Đóng modal khi click ra ngoài
+window.addEventListener("click", (event) => {
+  const modal = document.getElementById("weapon-modal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  };
+});
+
+renderWeapons();
