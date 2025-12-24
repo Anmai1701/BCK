@@ -8,7 +8,7 @@ async function renderWeapons() {
     .then((data) => {
       // hien thi len giao dien
       data?.forEach((char_name) => {
-        const li = document.createElement("li");
+        const li = document.createElement("a");
         const link = document.createElement("a");
         link.innerHTML = `<img width="200" src="${url_root + "weapons/" + char_name + "/icon"}" alt="${char_name}" style="cursor:pointer"/>`;
         link.addEventListener("click", (e) => {
