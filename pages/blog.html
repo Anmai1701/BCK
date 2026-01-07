@@ -10,7 +10,7 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/pages.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
 
   <body>
@@ -73,24 +73,73 @@
       <div class="text-center w-50">
       </div>
       <div class="blog-container">
-        <!-- Card 1 -->
-        <div class="blog-post">
-          <h3>Tiêu đề bài viết 1</h3>
-          <p>Nội dung bài viết số 1. Đây là phần mô tả ngắn cho bài viết.</p>
-          <img src="https://i.pinimg.com/736x/17/c8/b5/17c8b5105966868c24e32f05f063dc62.jpg" alt="blog banner">
-        </div>
-      <!-- Card 2 -->
-        <div class="blog-post">
-          <h3>Tiêu đề bài viết 2</h3>
-          <p>Nội dung bài viết số 2. Nội dung sẽ tự động xuống dòng.</p>
-          <img src="" alt="">
-        </div>
-      <!-- Card 3 -->
-        <div class="blog-post">
-          <h3>Tiêu đề bài viết 3</h3>
-          <p>Nội dung bài viết số 3. Thêm nhiều bài để thấy thanh cuộn.</p>
-          <img src="" alt="">
-        </div>
+        
+        <div class="blog-scroll-box">
+          <div class="blog-container">
+        
+            <div class="post-list">
+
+              <!-- Post 1 -->
+              <div class="post-card">
+                <h2>Tiêu đề bài viết 1</h2>
+                <p>Nội dung bài viết số 1</p>
+                <img src="https://i.pinimg.com/736x/17/c8/b5/17c8b5105966868c24e32f05f063dc62.jpg">
+            
+                <div class="post-actions">
+                  <button onclick="like(this)">👍 <span>0</span></button>
+                  <button onclick="comment()">💬</button>
+                </div>
+              </div>
+            
+              <!-- Post 2 -->
+              <div class="post-card">
+                <h2>Tiêu đề bài viết 2</h2>
+                <p>Nội dung bài viết số 2</p>
+                <img src="https://i.pinimg.com/736x/db/e2/f1/dbe2f1f782811aa7ae2722b06e25d587.jpg">
+            
+                <div class="post-actions">
+                  <button onclick="like(this)">👍 <span>0</span></button>
+                  <button onclick="comment()">💬</button>
+                </div>
+              </div>
+            
+              <!-- Post 3 -->
+              <div class="post-card">
+                <h2>Tiêu đề bài viết 3</h2>
+                <p>Nội dung bài viết số 3</p>
+                <img src="https://i.pinimg.com/736x/13/6d/1f/136d1f93e9843ed57d8c814fd22f7ad8.jpg">
+            
+                <div class="post-actions">
+                  <button onclick="like(this)">👍 <span>0</span></button>
+                  <button onclick="comment()">💬</button>
+                </div>
+              </div>
+            
+              <!-- Post 4 -->
+              <div class="post-card">
+                <h2>Tiêu đề bài viết 4</h2>
+                <p>Nội dung bài viết số 4</p>
+                <img src="https://i.pinimg.com/1200x/e8/5b/7a/e85b7a9e9896b3c0e3c53e6e4e54f06d.jpg">
+            
+                <div class="post-actions">
+                  <button onclick="like(this)">👍 <span>0</span></button>
+                  <button onclick="comment()">💬</button>
+                </div>
+              </div>
+            
+              <!-- Post 5 -->
+              <div class="post-card">
+                <h2>Tiêu đề bài viết 5</h2>
+                <p>Nội dung bài viết số 5</p>
+                <img src="https://i.pinimg.com/736x/08/2d/3d/082d3d76ad6137aa08c185b14e8c0e18.jpg">
+            
+                <div class="post-actions">
+                  <button onclick="like(this)">👍 <span>0</span></button>
+                  <button onclick="comment()">💬</button>
+                </div>
+              </div>
+            
+            </div>                    
       
     </header>
     <main class="container-fluid px-5 py-2">
