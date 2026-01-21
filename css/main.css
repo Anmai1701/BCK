@@ -228,3 +228,126 @@ main {
   margin-right: 20px;
   letter-spacing: 1px;
 }
+
+/* Container tổng */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;                 /* khoảng cách giữa các card */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Bọc ngoài mỗi bài viết */
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Nội dung card */
+.center-content {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 16px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Tiêu đề */
+.center-content h2 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+/* Nội dung */
+.center-content p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Hình ảnh */
+.center-content img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* KHUNG CHỨA CÓ CUỘN */
+.blog-scroll-box {
+  width: 80%;
+  max-width: 1000px;
+  height: 85vh;
+  margin: 40px auto;
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  overflow-y: auto;
+}
+
+/* DANH SÁCH BÀI VIẾT (CỘT DỌC) */
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* MỖI BÀI VIẾT */
+.center-content {
+  width: fit-content;
+  max-width: 100%;
+  margin: auto;
+  padding: 24px;
+
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  text-align: center;
+}
+
+/* TIÊU ĐỀ */
+.center-content h2 {
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+/* MÔ TẢ */
+.center-content p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* ẢNH – KHÔNG BỊ CẮT */
+.center-content img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+
+  display: block;
+  margin: auto;
+
+  border-radius: 16px;
+}
+
+/* THANH CUỘN ĐẸP (CHROME) */
+.blog-scroll-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.blog-scroll-box::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 8px;
+}
+
+.blog-scroll-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
